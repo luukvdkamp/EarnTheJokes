@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 58651993}
   - component: {fileID: 58651992}
   - component: {fileID: 58651991}
+  - component: {fileID: 58651995}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -227,6 +228,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &58651995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58651990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b4ea38448999843a28b6f47ce19a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dateStatus: 0
+  image: {fileID: 813799891}
+  slider: {fileID: 1871251917}
+  normal: {fileID: 2800000, guid: 3edcb19a8eacb8741b6af8adf285bb8f, type: 3}
+  happy: {fileID: 2800000, guid: 3e8dece874d870249a4ab0d825dd92c4, type: 3}
+  superHappy: {fileID: 2800000, guid: 4e87a82d212d0cf4e8b5e952132782a5, type: 3}
+  heelSuperHappy: {fileID: 2800000, guid: 9ab8937907fc8384abdf780af148de25, type: 3}
+  angry: {fileID: 2800000, guid: 21492d340cc368a448adeb09f1d7bdbd, type: 3}
+  superAngry: {fileID: 2800000, guid: b560ff7628693fa4a8c2c7bc4f4b948b, type: 3}
+  heelSuperAngry: {fileID: 2800000, guid: 6c8eb0cbd7147cb41bd91d1133fe4f04, type: 3}
 --- !u!1 &92958180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,10 +1632,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1967073935}
   m_HandleRect: {fileID: 856790250}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -3
+  m_MaxValue: 3
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
