@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class LevelButton : MonoBehaviour
 {
     public DateButtons dateButtons;
     public int dateStatusValue;
-    public int levelDifficulty; // 1 == easy, 2 == medium, 3 == hard
+    public Transform playerPosition;
+    public GameObject player;
+    public Movement movement;
+    public CinemachineVirtualCamera cam;
 
     public void Button()
     {
         dateButtons.dateStatus += dateStatusValue;
+        player.transform.position = playerPosition.position;
+        cam.Follow = player.transform;
+        movement.enabled = true;
     }
 }

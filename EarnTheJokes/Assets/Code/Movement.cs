@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public Animator animator;
     public float jumpHeight;
     public float runSpeed;
+    public float runAirSpeed;
     public bool isGrounded;
 
     public float gravityincrease;
@@ -13,7 +15,19 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        //domme bug fix unity moment
+        transform.localRotation = new Quaternion();
+
         float horizontal = Input.GetAxisRaw("Horizontal");
+        if(horizontal != 0)
+        {
+            animator.SetBool("walking", true);
+        }
+
+        else
+        {
+            animator.SetBool("walking", false);
+        }
 
         if(isGrounded)
         {
@@ -25,6 +39,8 @@ public class Movement : MonoBehaviour
         {
             gravityCounter += gravityincrease * Time.deltaTime;
             transform.Translate(Vector3.down * gravityincrease * Time.deltaTime);
+
+            transform.Translate(Vector3.right * horizontal * runAirSpeed * Time.deltaTime);
         }
 
 
@@ -35,7 +51,7 @@ public class Movement : MonoBehaviour
 
     }
 
-    private void OnCollisionStay(Collision other)
+    private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "Ground")
         {
@@ -43,7 +59,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Ground")
         {
