@@ -12,6 +12,7 @@ public class LevelButton : MonoBehaviour
     public GameObject player;
     public Movement movement;
     public CinemachineVirtualCamera cam;
+    public GameObject canvas;
 
     public void Button()
     {
@@ -19,5 +20,6 @@ public class LevelButton : MonoBehaviour
         player.transform.position = playerPosition.position;
         cam.Follow = player.transform;
         movement.enabled = true;
+        canvas.SetActive(false);
     }
 }

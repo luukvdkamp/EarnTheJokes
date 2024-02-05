@@ -276,6 +276,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 25074448}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &44639637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44639640}
+  m_Layer: 0
+  m_Name: camReturn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &44639640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44639637}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &53872420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -847,6 +878,7 @@ MonoBehaviour:
   player: {fileID: 2092485545}
   movement: {fileID: 2092485547}
   cam: {fileID: 1920326236}
+  canvas: {fileID: 58651990}
 --- !u!1001 &203506663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1447,7 +1479,8 @@ MonoBehaviour:
   movement: {fileID: 2092485547}
   cam: {fileID: 1920326236}
   camPosition: {fileID: 1920326235}
-  camPositionLocation: {fileID: 0}
+  camPositionLocation: {fileID: 44639640}
+  canvas: {fileID: 58651990}
 --- !u!1001 &353540801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2997,7 +3030,8 @@ MonoBehaviour:
   movement: {fileID: 2092485547}
   cam: {fileID: 1920326236}
   camPosition: {fileID: 1920326235}
-  camPositionLocation: {fileID: 0}
+  camPositionLocation: {fileID: 44639640}
+  canvas: {fileID: 58651990}
 --- !u!1001 &604689296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5314,6 +5348,7 @@ MonoBehaviour:
   player: {fileID: 2092485545}
   movement: {fileID: 2092485547}
   cam: {fileID: 1920326236}
+  canvas: {fileID: 58651990}
 --- !u!1001 &1141862641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5985,6 +6020,7 @@ MonoBehaviour:
   player: {fileID: 2092485545}
   movement: {fileID: 2092485547}
   cam: {fileID: 1920326236}
+  canvas: {fileID: 58651990}
 --- !u!1001 &1273183222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6256,7 +6292,8 @@ MonoBehaviour:
   movement: {fileID: 2092485547}
   cam: {fileID: 1920326236}
   camPosition: {fileID: 1920326235}
-  camPositionLocation: {fileID: 0}
+  camPositionLocation: {fileID: 44639640}
+  canvas: {fileID: 58651990}
 --- !u!1001 &1298235292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9845,7 +9882,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092485545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a9d7734528469649855bc0e0e5c73c2, type: 3}
   m_Name: 
@@ -10107,3 +10144,4 @@ SceneRoots:
   - {fileID: 941771250}
   - {fileID: 1920326237}
   - {fileID: 497241243}
+  - {fileID: 44639640}

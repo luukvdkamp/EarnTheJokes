@@ -9,6 +9,7 @@ public class LevelFinish : MonoBehaviour
     public CinemachineVirtualCamera cam;
     public GameObject camPosition;
     public Transform camPositionLocation;
+    public GameObject canvas;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,7 @@ public class LevelFinish : MonoBehaviour
             movement.enabled = false;
             cam.Follow = null;
             camPosition.transform.position = camPositionLocation.transform.position;
+            canvas.SetActive(true);
         }
     }
 }
