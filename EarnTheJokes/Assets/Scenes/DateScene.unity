@@ -1479,7 +1479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7799f8d8249ccec4ca2f142d70e77052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dateButtons: {fileID: 58651995}
   dateStatusValue: 2
   playerPosition: {fileID: 1477715394}
   player: {fileID: 2092485545}
@@ -2893,6 +2892,8 @@ MonoBehaviour:
   scheldCanvas: {fileID: 1638497403}
   spawning: {fileID: 1952405897}
   soundManager: {fileID: 218305098}
+  dateButtons: {fileID: 58651995}
+  dateStatusValue: 3
 --- !u!1001 &320703832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5723,6 +5724,8 @@ MonoBehaviour:
   scheldCanvas: {fileID: 1638497403}
   spawning: {fileID: 630536908}
   soundManager: {fileID: 218305098}
+  dateButtons: {fileID: 58651995}
+  dateStatusValue: 2
 --- !u!1001 &604689296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9381,7 +9384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7799f8d8249ccec4ca2f142d70e77052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dateButtons: {fileID: 58651995}
   dateStatusValue: 1
   playerPosition: {fileID: 252953505}
   player: {fileID: 2092485545}
@@ -10549,7 +10551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7799f8d8249ccec4ca2f142d70e77052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dateButtons: {fileID: 58651995}
   dateStatusValue: 0
   playerPosition: {fileID: 1574288544}
   player: {fileID: 2092485545}
@@ -11067,6 +11068,8 @@ MonoBehaviour:
   scheldCanvas: {fileID: 1638497403}
   spawning: {fileID: 2018226099}
   soundManager: {fileID: 218305098}
+  dateButtons: {fileID: 58651995}
+  dateStatusValue: 1
 --- !u!1001 &1298235292
 PrefabInstance:
   m_ObjectHideFlags: 0

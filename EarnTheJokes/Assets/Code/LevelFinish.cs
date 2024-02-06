@@ -13,6 +13,8 @@ public class LevelFinish : MonoBehaviour
     public GameObject scheldCanvas;
     public Spawning spawning;
     public SoundManager soundManager;
+    public DateButtons dateButtons;
+    public int dateStatusValue;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +31,7 @@ public class LevelFinish : MonoBehaviour
                 Destroy(obj);
             }
 
+            dateButtons.dateStatus += dateStatusValue;
             scheldCanvas.SetActive(false);
             soundManager.inDream = false;
         }

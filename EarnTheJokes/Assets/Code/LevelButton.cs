@@ -6,7 +6,6 @@ using Cinemachine;
 
 public class LevelButton : MonoBehaviour
 {
-    public DateButtons dateButtons;
     public int dateStatusValue;
     public Transform playerPosition;
     public GameObject player;
@@ -17,7 +16,6 @@ public class LevelButton : MonoBehaviour
 
     public void Button()
     {
-        dateButtons.dateStatus += dateStatusValue;
         player.transform.position = playerPosition.position;
         cam.Follow = player.transform;
         player.SetActive(true);
