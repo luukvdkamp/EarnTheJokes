@@ -15,6 +15,7 @@ public class LevelFinish : MonoBehaviour
     public SoundManager soundManager;
     public DateButtons dateButtons;
     public int dateStatusValue;
+    public AudioSource happy;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -34,6 +35,7 @@ public class LevelFinish : MonoBehaviour
             dateButtons.dateStatus += dateStatusValue;
             scheldCanvas.SetActive(false);
             soundManager.inDream = false;
+            happy.Play();
         }
     }
 }

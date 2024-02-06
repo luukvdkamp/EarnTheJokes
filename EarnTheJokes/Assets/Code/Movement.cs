@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
     public GameObject scheldCanvas;
     public SoundManager soundManager;
     public GameObject wordCloud;
-
+    public AudioSource angry;
 
     //niet vullen
     public GameObject scheldwoord;
@@ -82,6 +82,7 @@ public class Movement : MonoBehaviour
             hitByScheldwoord = false;
 
             soundManager.inDream = false;
+            angry.Play();
             gameObject.SetActive(false);
         }
 
