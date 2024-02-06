@@ -21,7 +21,7 @@ public class Spawning : MonoBehaviour
 
             int spawnPosition = Random.Range(-spawnRange, spawnRange);
 
-            int randomScheldwoord = Random.Range(0, 2);
+            int randomScheldwoord = Random.Range(0, 3);
             if(randomScheldwoord == 0)
             {
                 GameObject scheldwoordPrefab = Instantiate(scheldwoorden[0], transform.position + new Vector3(spawnPosition, 0, 0), Quaternion.identity);
@@ -31,9 +31,18 @@ public class Spawning : MonoBehaviour
                 scheldwoordPrefab.transform.parent = scheldwoordCanvas.transform;
             }
 
-            else
+            else if(randomScheldwoord == 1)
             {
                 GameObject scheldwoordPrefab = Instantiate(scheldwoorden[1], transform.position + new Vector3(spawnPosition, 0, 0), Quaternion.identity);
+                scheldwoordPrefab.GetComponent<Scheldwoord>().spawning = GetComponent<Spawning>();
+                scheldwoordenList.Add(scheldwoordPrefab);
+
+                scheldwoordPrefab.transform.parent = scheldwoordCanvas.transform;
+            }
+
+            else if (randomScheldwoord == 2)
+            {
+                GameObject scheldwoordPrefab = Instantiate(scheldwoorden[2], transform.position + new Vector3(spawnPosition, 0, 0), Quaternion.identity);
                 scheldwoordPrefab.GetComponent<Scheldwoord>().spawning = GetComponent<Spawning>();
                 scheldwoordenList.Add(scheldwoordPrefab);
 
