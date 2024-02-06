@@ -11368,7 +11368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: We actually do know eachother?? Your tripping for sure.
+  m_text: We actually do know eachother?? Your crazy.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 264d827bb41d6964ba6738ffcc6e122c, type: 2}
   m_sharedMaterial: {fileID: 2723391758047280944, guid: 264d827bb41d6964ba6738ffcc6e122c,
@@ -27796,9 +27796,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'nah
-
-'
+  m_text: no
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 264d827bb41d6964ba6738ffcc6e122c, type: 2}
   m_sharedMaterial: {fileID: 2723391758047280944, guid: 264d827bb41d6964ba6738ffcc6e122c,
