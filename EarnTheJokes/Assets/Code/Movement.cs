@@ -22,6 +22,7 @@ public class Movement : MonoBehaviour
     public Transform camPositionLocation;
     public GameObject canvas;
     public GameObject scheldCanvas;
+    public SoundManager soundManager;
 
 
     //niet vullen
@@ -78,6 +79,7 @@ public class Movement : MonoBehaviour
             scheldCanvas.SetActive(false);
             hitByScheldwoord = false;
 
+            soundManager.inDream = false;
             gameObject.SetActive(false);
         }
 

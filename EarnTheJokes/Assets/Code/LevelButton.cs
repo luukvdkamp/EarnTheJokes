@@ -13,6 +13,7 @@ public class LevelButton : MonoBehaviour
     public CinemachineVirtualCamera cam;
     public GameObject canvas;
     public GameObject scheldwoordCanvas;
+    public SoundManager soundManager;
 
     public void Button()
     {
@@ -22,5 +23,6 @@ public class LevelButton : MonoBehaviour
         player.SetActive(true);
         canvas.SetActive(false);
         scheldwoordCanvas.SetActive(true);
+        soundManager.inDream = true;
     }
 }

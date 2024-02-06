@@ -12,6 +12,7 @@ public class LevelFinish : MonoBehaviour
     public GameObject canvas;
     public GameObject scheldCanvas;
     public Spawning spawning;
+    public SoundManager soundManager;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +30,7 @@ public class LevelFinish : MonoBehaviour
             }
 
             scheldCanvas.SetActive(false);
+            soundManager.inDream = false;
         }
     }
 }
