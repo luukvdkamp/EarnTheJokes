@@ -13,6 +13,8 @@ public class LevelButton : MonoBehaviour
     public GameObject canvas;
     public GameObject scheldwoordCanvas;
     public SoundManager soundManager;
+    public GameObject newDialogue;
+    public GameObject currentDialogue;
 
     public void Button()
     {
@@ -22,5 +24,7 @@ public class LevelButton : MonoBehaviour
         canvas.SetActive(false);
         scheldwoordCanvas.SetActive(true);
         soundManager.inDream = true;
+        newDialogue.SetActive(true);
+        currentDialogue.SetActive(false);
     }
 }
