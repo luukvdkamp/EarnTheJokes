@@ -19,6 +19,11 @@ public class DateButtons : MonoBehaviour
     public Texture2D superAngry;
     public Texture2D heelSuperAngry;
 
+    public Image blackBackground;
+    public float fadeDuration;
+    public GameObject gameOverCanvas;
+    public GameObject endingCanvas;
+
     public void Update()
     {
         //bug
@@ -68,6 +73,8 @@ public class DateButtons : MonoBehaviour
             // Assign the Sprite to the Image component
             image.sprite = sprite;
             slider.value = 3;
+
+            EndingScene();
         }
 
         else if(dateStatus == -1)
@@ -95,9 +102,57 @@ public class DateButtons : MonoBehaviour
             // Assign the Sprite to the Image component
             image.sprite = sprite;
             slider.value = -3;
+
+            GameOverScene();
         }
 
 
+    }
+
+    void EndingScene()
+    {
+        StartCoroutine(FadeInImageAndOpenEnding());
+    }
+
+    void GameOverScene()
+    {
+        StartCoroutine(FadeInImageAndOpenGameOver());
+    }
+
+    IEnumerator FadeInImageAndOpenEnding()
+    {
+        float currentAlpha = blackBackground.color.a;
+        float targetAlpha = 1f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            float newAlpha = Mathf.Lerp(currentAlpha, targetAlpha, elapsedTime / fadeDuration);
+            blackBackground.color = new Color(blackBackground.color.r, blackBackground.color.g, blackBackground.color.b, newAlpha);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        blackBackground.color = new Color(blackBackground.color.r, blackBackground.color.g, blackBackground.color.b, targetAlpha);
+        endingCanvas.SetActive(true);
+    }
+
+    IEnumerator FadeInImageAndOpenGameOver()
+    {
+        float currentAlpha = blackBackground.color.a;
+        float targetAlpha = 1f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            float newAlpha = Mathf.Lerp(currentAlpha, targetAlpha, elapsedTime / fadeDuration);
+            blackBackground.color = new Color(blackBackground.color.r, blackBackground.color.g, blackBackground.color.b, newAlpha);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        blackBackground.color = new Color(blackBackground.color.r, blackBackground.color.g, blackBackground.color.b, targetAlpha);
+        gameOverCanvas.SetActive(true);
     }
 
 }
