@@ -3663,7 +3663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hey.. long time no see. What brought you here to this cenemory?
+  m_text: Hey.. long time no see. What brought you here to this ceremony?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 688dbaf64d6c88846a576651c5ea7cd2, type: 2}
   m_sharedMaterial: {fileID: 2723391758047280944, guid: 688dbaf64d6c88846a576651c5ea7cd2,
@@ -13566,6 +13566,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 555671405319809788, guid: db3be3ffc4e7bb140920c635e639d523,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 555671405319809788, guid: db3be3ffc4e7bb140920c635e639d523,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 555671405319809788, guid: db3be3ffc4e7bb140920c635e639d523,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7255030437171647204, guid: db3be3ffc4e7bb140920c635e639d523,
         type: 3}
       propertyPath: m_LocalPosition.x
