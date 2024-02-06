@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     public GameObject canvas;
     public GameObject scheldCanvas;
     public SoundManager soundManager;
+    public GameObject wordCloud;
 
 
     //niet vullen
@@ -66,6 +67,7 @@ public class Movement : MonoBehaviour
 
         if(hitByScheldwoord)
         {
+            wordCloud.SetActive(true);
             dateButtons.dateStatus--;
             cam.Follow = null;
             camPosition.transform.position = camPositionLocation.transform.position;
