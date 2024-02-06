@@ -13636,7 +13636,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8012181730450442054, guid: db3be3ffc4e7bb140920c635e639d523, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7255030437171647204, guid: db3be3ffc4e7bb140920c635e639d523,
@@ -13652,16 +13653,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2092485547}
+    - targetCorrespondingSourceObject: {fileID: 8062810107298383966, guid: db3be3ffc4e7bb140920c635e639d523,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2092485554}
   m_SourcePrefab: {fileID: 100100000, guid: db3be3ffc4e7bb140920c635e639d523, type: 3}
 --- !u!1 &2092485545 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8062810107298383966, guid: db3be3ffc4e7bb140920c635e639d523,
-    type: 3}
-  m_PrefabInstance: {fileID: 2092485544}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2092485546 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8012181730450442054, guid: db3be3ffc4e7bb140920c635e639d523,
     type: 3}
   m_PrefabInstance: {fileID: 2092485544}
   m_PrefabAsset: {fileID: 0}
@@ -13678,7 +13677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dateButtons: {fileID: 58651995}
-  animator: {fileID: 2092485546}
+  animator: {fileID: 2092485554}
   jumpHeight: 4000
   runSpeed: 20
   runAirSpeed: 10
@@ -13726,6 +13725,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2092485544}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2092485554
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092485545}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2762348558b4dbd4591c662d9d275207, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2125536181
 PrefabInstance:
   m_ObjectHideFlags: 0

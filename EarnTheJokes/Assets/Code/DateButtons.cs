@@ -21,6 +21,18 @@ public class DateButtons : MonoBehaviour
 
     public void Update()
     {
+        //bug
+        if(dateStatus < -3)
+        {
+            dateStatus = -3;
+        }
+
+        else if(dateStatus > 3)
+        {
+            dateStatus = 3;
+        }
+        //bug
+
         if(dateStatus == 0)
         {
 
