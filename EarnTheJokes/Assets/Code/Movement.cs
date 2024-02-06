@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Movement : MonoBehaviour
 {
+    public DateButtons dateButtons;
     public Animator animator;
     public float jumpHeight;
     public float runSpeed;
@@ -12,6 +14,18 @@ public class Movement : MonoBehaviour
 
     public float gravityincrease;
     private float gravityCounter;
+    public bool hitByScheldwoord;
+
+    public Movement movement;
+    public CinemachineVirtualCamera cam;
+    public GameObject camPosition;
+    public Transform camPositionLocation;
+    public GameObject canvas;
+    public GameObject scheldCanvas;
+
+
+    //niet vullen
+    public GameObject scheldwoord;
 
     private void Update()
     {
@@ -47,6 +61,24 @@ public class Movement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight * Time.deltaTime, ForceMode.Impulse);
+        }
+
+        if(hitByScheldwoord)
+        {
+            dateButtons.dateStatus--;
+            cam.Follow = null;
+            camPosition.transform.position = camPositionLocation.transform.position;
+            canvas.SetActive(true);
+            List<GameObject> myList = scheldwoord.GetComponent<Scheldwoord>().spawning.scheldwoordenList;
+            foreach (GameObject obj in myList)
+            {
+                Destroy(obj);
+            }
+
+            scheldCanvas.SetActive(false);
+            hitByScheldwoord = false;
+
+            gameObject.SetActive(false);
         }
 
     }

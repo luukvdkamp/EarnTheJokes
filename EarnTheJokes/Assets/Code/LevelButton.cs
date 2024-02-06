@@ -10,16 +10,17 @@ public class LevelButton : MonoBehaviour
     public int dateStatusValue;
     public Transform playerPosition;
     public GameObject player;
-    public Movement movement;
     public CinemachineVirtualCamera cam;
     public GameObject canvas;
+    public GameObject scheldwoordCanvas;
 
     public void Button()
     {
         dateButtons.dateStatus += dateStatusValue;
         player.transform.position = playerPosition.position;
         cam.Follow = player.transform;
-        movement.enabled = true;
+        player.SetActive(true);
         canvas.SetActive(false);
+        scheldwoordCanvas.SetActive(true);
     }
 }
