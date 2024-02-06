@@ -6050,8 +6050,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scheldwoordCanvas: {fileID: 1638497403}
-  scheldwoorden: {fileID: 8220680777556355218, guid: 6bc2b333635f3b8418a59d6beff51b0b,
-    type: 3}
+  scheldwoorden:
+  - {fileID: 8220680777556355218, guid: 6bc2b333635f3b8418a59d6beff51b0b, type: 3}
+  - {fileID: 8220680777556355218, guid: ca92f23581c82d543bec1c0103de7040, type: 3}
   scheldwoordenList: []
   spawnDelay: 1
   spawnRange: 25
@@ -16017,8 +16018,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scheldwoordCanvas: {fileID: 1638497403}
-  scheldwoorden: {fileID: 8220680777556355218, guid: 6bc2b333635f3b8418a59d6beff51b0b,
-    type: 3}
+  scheldwoorden:
+  - {fileID: 8220680777556355218, guid: 6bc2b333635f3b8418a59d6beff51b0b, type: 3}
+  - {fileID: 8220680777556355218, guid: ca92f23581c82d543bec1c0103de7040, type: 3}
   scheldwoordenList: []
   spawnDelay: 1
   spawnRange: 25
@@ -16434,8 +16436,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scheldwoordCanvas: {fileID: 1638497403}
-  scheldwoorden: {fileID: 8220680777556355218, guid: 6bc2b333635f3b8418a59d6beff51b0b,
-    type: 3}
+  scheldwoorden:
+  - {fileID: 8220680777556355218, guid: 6bc2b333635f3b8418a59d6beff51b0b, type: 3}
+  - {fileID: 8220680777556355218, guid: ca92f23581c82d543bec1c0103de7040, type: 3}
   scheldwoordenList: []
   spawnDelay: 1
   spawnRange: 25
