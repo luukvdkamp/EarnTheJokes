@@ -20222,8 +20222,7 @@ PrefabInstance:
       propertyPath: m_text
       value: '- here lies -
 
-
-        People who play fifa'
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1261857827273858970, guid: ee8896ee663009c4f8106ec08929d470,
         type: 3}
@@ -22134,8 +22133,7 @@ PrefabInstance:
       propertyPath: m_text
       value: '- here lies -
 
-
-        DnD game opdracht'
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1261857827273858970, guid: ee8896ee663009c4f8106ec08929d470,
         type: 3}
