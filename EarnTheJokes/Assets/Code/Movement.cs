@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public float runSpeed;
     public float runAirSpeed;
     public bool isGrounded;
+    private float jumpReset;
 
     public float gravityincrease;
     private float gravityCounter;
@@ -59,12 +60,6 @@ public class Movement : MonoBehaviour
             transform.Translate(Vector3.right * horizontal * runAirSpeed * Time.deltaTime);
         }
 
-
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight * Time.deltaTime, ForceMode.Impulse);
-        }
-
         if(hitByScheldwoord)
         {
             wordCloud.SetActive(true);
@@ -86,6 +81,17 @@ public class Movement : MonoBehaviour
             gameObject.SetActive(false);
         }
 
+    }
+
+    private void FixedUpdate()
+    {
+        jumpReset += Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.Space) && isGrounded && jumpReset > 0.4f)
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight * Time.deltaTime, ForceMode.Impulse);
+            jumpReset = 0;
+        }
     }
 
     private void OnTriggerStay(Collider other)

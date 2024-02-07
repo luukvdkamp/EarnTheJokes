@@ -30275,7 +30275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dateButtons: {fileID: 58651995}
   animator: {fileID: 2092485554}
-  jumpHeight: 4000
+  jumpHeight: 1000
   runSpeed: 20
   runAirSpeed: 10
   isGrounded: 0
