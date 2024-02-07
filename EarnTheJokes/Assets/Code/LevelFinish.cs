@@ -16,10 +16,16 @@ public class LevelFinish : MonoBehaviour
     public DateButtons dateButtons;
     public int dateStatusValue;
     public AudioSource happy;
+    private float reset;
+
+    private void Update()
+    {
+        reset += Time.deltaTime;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" && reset > 1)
         {
             player.SetActive(true);
             cam.Follow = null;
@@ -36,6 +42,9 @@ public class LevelFinish : MonoBehaviour
             scheldCanvas.SetActive(false);
             soundManager.inDream = false;
             happy.Play();
+            reset = 0;
+
+            print("finish");
         }
     }
 }
